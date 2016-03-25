@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('plant.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
@@ -11,18 +11,18 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+  $scope.plants = Plants.all();
+  $scope.remove = function(plant) {
+    Plants.remove(plant);
   };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('PlantDetailCtrl', function($scope, $stateParams, Plants) {
+  $scope.plant = Plants.get($stateParams.plantId);
 })
 
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
-    enableFriends: true
+    enableCrops: true
   };
 });
